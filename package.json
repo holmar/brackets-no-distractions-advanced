@@ -1,0 +1,37 @@
+{
+    "name": "holmar.no-distractions-advanced",
+    "title": "No Distractions Advanced",
+    "description": "Extends the \"No Distractions\" view to display the sidebar when pointing at the left side of the editor and the toolbar when pointing at the right side.",
+    "keywords": [
+        "sidebar",
+        "toolbar",
+        "hover",
+        "mouseover",
+        "overlay",
+        "interface",
+        "minimal"
+    ],
+    "categories": "editing",
+    "homepage": "https://github.com/holmar/no-distractions-advanced",
+    "version": "1.0.0",
+    "author": "Martin Holler",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=1.6.0"
+    },
+    "i18n": ["en", "de"],
+    "package-i18n": {
+        "de": {
+            "description": "Erweitert die \"No Distractions\"-Ansicht dadurch, dass beim Zeigen auf die linke Seite des Editors die Seitenleiste, und beim Zeigen auf die rechte Seite die Werkzeugleiste eingeblendet wird.",
+            "keywords": [
+                "Seitenleiste",
+                "Werkzeugleiste",
+                "Hover",
+                "Mouseover",
+                "Überlagerung",
+                "Benutzeroberfläche",
+                "minimalistisch"
+            ]
+        }
+    }
+}

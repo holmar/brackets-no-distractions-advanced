@@ -1,0 +1,43 @@
+/* always display the target elements */
+.nda .nda-target--left {
+    display: -webkit-box !important;
+    display: box !important;
+    transform: translateX(-100%);
+}
+
+.nda .nda-target--right {
+    display: block !important;
+    transform: translateX(100%);
+}
+
+/* avoid overlapping issues with resizers */
+.nda .horz-resizer {
+    pointer-events: none;
+}
+
+/* fix positioning errors caused by transform creating a new stacking context */
+.nda .nda-target--left #project-files-container {
+    position: static !important;
+}
+
+.nda .sidebar-selection-extension,
+.nda .filetree-selection-extension {
+    display: none !important;
+}
+
+/* push mode */
+.nda[data-nda-mode="push"] .main-view {
+    transition: transform 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/* overlay mode */
+.nda[data-nda-mode="overlay"] .nda-target {
+    z-index: 50;
+    transition: transform 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.nda[data-nda-mode="overlay"].nda--left .nda-target--left,
+.nda[data-nda-mode="overlay"].nda--right .nda-target--right {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transform: translateX(0);
+}
