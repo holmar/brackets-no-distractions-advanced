@@ -4,14 +4,17 @@
  * the left side of the editor and the toolbar when pointing at the right side.
  *
  * @author Martin Holler
- * @version 1.0.0
+ * @version 1.0.1
  * @license MIT
  */
 
 define(function (require, exports, module) {
     'use strict';
 
-    var LEFT_OFFSET = 20;
+    var OFFSETS = {
+        left: 20,
+        right: 3 // needs to be very low for scrollbars to still be usable
+    };
     var MODES = ['overlay', 'push'];
 
     // imports
@@ -43,9 +46,9 @@ define(function (require, exports, module) {
                 return;
             }
 
-            if (e.clientX < LEFT_OFFSET || (state === 1 && e.clientX < sidebarWidth)) {
+            if (e.clientX <= OFFSETS.left) {
                 state = 1;
-            } else if (e.clientX > $editor.width() - toolbarWidth) {
+            } else if (e.clientX >= $editor.width() - OFFSETS.right) {
                 state = 2;
             } else {
                 state = 0;

@@ -13,7 +13,7 @@
     ],
     "categories": "editing",
     "homepage": "https://github.com/holmar/brackets-no-distractions-advanced",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Martin Holler",
     "license": "MIT",
     "engines": {
